@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+  --main-color: #54031e;
+  --accent1: #f9a825;
+  --accent2: #2ca6a4;
+  --accent3: #7e20c9;
+  --accent4: #e64c3c;
+  --box-bg: #fff8fb;
+  --box-shadow: 0 4px 18px rgba(84,3,30, 0.12);
+  --input-bg: #fff;
+  --input-border: #d2b7c4;
+  --btn-radius: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--box-bg);
+  color: var(--main-color);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#mainHeader {
+  background: linear-gradient(90deg, var(--main-color), var(--accent3));
+  color: #fff;
+  padding: 1.2em 0;
+  text-align: center;
+  margin-bottom: 0.5em;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.07);
+}
+#mainHeader h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  font-size: 2.1em;
+}
+#mainHeader .tagline {
+  display: block;
+  font-weight: 400;
+  font-size: 1em;
+  color: var(--accent1);
+  margin-top: 0.2em;
+}
+main {
+  padding: 1.2em;
+  max-width: 650px;
+  margin: 0 auto;
+  background: none;
+}
+section { margin-bottom: 1.5em; }
+h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 0.8em;
+  letter-spacing: 1px;
+}
+#projectDetails, #pricingSection {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  padding: 1em 1.2em;
+  margin-bottom: 1em;
+}
+#projectDetails label,
+#pricingSection label {
+  display: block;
+  margin-bottom: 1em;
+  color: var(--main-color);
+  font-weight: 500;
+}
+input[type="text"],
+input[type="number"] {
+  width: 92%;
+  padding: 0.6em;
+  font-size: 1em;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  border: 1.8px solid var(--input-border);
+  border-radius: 16px;
+  background: var(--input-bg);
+  transition: border 0.2s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+input:focus { outline: none; border-color: var(--main-color); }
+label { font-size: 1em; }
+#roomsNav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#addRoomBtn { margin-right: 1em; }
+#roomList {
+  list-style: none;
+  display: flex;
+  gap: 0.6em;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+}
+#roomList li {
+  background: var(--accent2);
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1.5px 8px rgba(0,0,0,0.03);
+  transition: background 0.16s;
+}
+#roomList li.active {
+  background: var(--main-color);
+  color: #f9a825;
+}
+#roomsContainer .roomForm {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1em 1em 0.5em 1em;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1.2em;
+}
+#roomsContainer .roomForm label {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+.deductions-section {
+  margin-top: 1.1em;
+  padding: 0.8em;
+  border-radius: 14px;
+  background: #f7fcfd;
+  box-shadow: 0 1px 5px rgba(44,166,164,0.05);
+}
+.deduction-row {
+  display: flex;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+}
+.deduction-row input[type="text"], .deduction-row input[type="number"] {
+  width: 68px;
+  padding: 0.4em;
+  font-size: 1em;
+  margin: 0;
+  border-radius: 8px;
+}
+.add-deduction-btn,
+.remove-deduction-btn {
+  padding: 0.3em 0.9em;
+  border-radius: 9px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  background: var(--accent1);
+  color: #fff;
+  margin-left: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+}
+.remove-deduction-btn { background: var(--accent4); }
+#resultsSection { margin-top: 1.3em; }
+#individualRoomResults,
+#projectSummaryBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+.room-summary-box,
+.project-summary-box {
+  background: linear-gradient(90deg, #fff, #fae0ef 85%);
+  border-radius: 13px;
+  box-shadow: var(--box-shadow);
+  padding: 1.05em 1.4em 1em 1.2em;
+  margin-bottom: 0.2em;
+  border-left: 6px solid var(--accent3);
+}
+.project-summary-box {
+  background: linear-gradient(100deg, #fff, #fff2c3 85%);
+  border-left: 6px solid var(--accent1);
+}
+.room-summary-box .summary-title,
+.project-summary-box .summary-title {
+  font-weight: 700;
+  color: var(--main-color);
+  font-size: 1.12em;
+  margin-bottom: 0.3em;
+}
+.summary-section { margin-top: 0.35em; }
+.summary-section b {
+  color: var(--main-color);
+  font-weight: 700;
+}
+.price-section {
+  background: #feefd7;
+  border-radius: 9px;
+  padding: 0.6em 1em;
+  font-size: 1.06em;
+  margin: 0.45em 0 0.3em 0;
+  font-weight: 600;
+  box-shadow: 0 1px 8px rgba(249,168,37,0.09);
+}
+.price-section .total {
+  color: var(--accent1);
+  font-size: 1.1em;
+}
+
+#actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  justify-content: space-around;
+  margin: 1em 0 0.6em 0;
+}
+.multi-color-btn {
+  border: none;
+  outline: none;
+  padding: 0.7em 2em;
+  border-radius: var(--btn-radius);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(44,166,164,0.07);
+  margin: 0;
+  margin-bottom: 0.2em;
+  transition: background 0.17s;
+  background: var(--main-color);
+}
+.multi-color-btn:nth-child(2) { background: var(--accent2); }
+.multi-color-btn:nth-child(3) { background: var(--accent1); color: var(--main-color);}
+.multi-color-btn:nth-child(4) { background: var(--accent3);}
+.multi-color-btn:nth-child(5) { background: var(--accent4);}
+.multi-color-btn:active,
+.multi-color-btn:focus { opacity: 0.90; filter: brightness(0.95); }
+@media (max-width: 650px) {
+  main { padding: 0.9em 0.2em; }
+  #mainHeader { font-size: 1em; border-radius: 0 0 18px 18px; }
+  #actions { gap: 0.3em; }
+  input[type="text"], input[type="number"] { font-size: 1em; }
+}
+footer {
+  text-align: center;
+  padding: 0.7em 0 1em 0;
+  background: linear-gradient(90deg, #fff, #f8f4ed 70%);
+  font-size: 1em;
+  color: var(--main-color);
+  border-radius: 22px 22px 0 0;
+  margin-top: 1em;
+  box-shadow: 0 -2px 16px rgba(84,3,30,0.07);
+}
+#footerBrand {
+  margin-top: 0.8em;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--main-color);
+  letter-spacing: 0.4px;
+}
+#dateTimeStamp {
+  display: block;
+  margin-top: 0.23em;
+  font-size: 0.95em;
+  color: #7e20c9;
+}
