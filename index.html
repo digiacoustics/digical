@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DIGICAL – Powered by Digi Acoustics</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header id="mainHeader">
+    <h1>
+      DIGICAL
+      <span class="tagline">Powered by Digi Acoustics</span>
+    </h1>
+  </header>
+
+  <main>
+    <!-- Project Details -->
+    <section id="projectDetails">
+      <h2>Project Details</h2>
+      <label>Project Name: <input type="text" id="projectName" /></label>
+      <label>Client Name: <input type="text" id="clientName" /></label>
+      <label>Location: <input type="text" id="projectLocation" /></label>
+    </section>
+
+    <!-- Rooms & Navigation -->
+    <section id="roomsSection">
+      <div id="roomsNav">
+        <button id="addRoomBtn" class="multi-color-btn">Add Room</button>
+        <ul id="roomList">
+          <!-- List of Room Tabs inserted by JS -->
+        </ul>
+      </div>
+      <div id="roomsContainer">
+        <!-- Active Room Form inserted here -->
+      </div>
+    </section>
+
+    <!-- Pricing Inputs -->
+    <section id="pricingSection">
+      <h2>Pricing (INR)</h2>
+      <label>Wall Area Price (per sq ft): <input type="number" id="wallPrice" min="0"></label>
+      <label>Ceiling Area Price (per sq ft): <input type="number" id="ceilingPrice" min="0"></label>
+      <label>Floor Area Price (per sq ft): <input type="number" id="floorPrice" min="0"></label>
+      <label>Acoustic Door Price (per door): <input type="number" id="doorPrice" min="0"></label>
+    </section>
+
+    <!-- Results Display -->
+    <section id="resultsSection">
+      <h2>Results</h2>
+      <div id="individualRoomResults">
+        <!-- Individual Room Summaries inserted by JS -->
+      </div>
+      <div id="projectSummaryBox">
+        <!-- Project total summary inserted by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="actions">
+      <button id="calculateBtn" class="multi-color-btn">Calculate</button>
+      <button id="saveBtn" class="multi-color-btn">Save</button>
+      <button id="shareBtn" class="multi-color-btn">Share</button>
+      <button id="resetBtn" class="multi-color-btn">Reset</button>
+      <button id="screenshotBtn" class="multi-color-btn">Screenshot</button>
+    </div>
+    <div id="footerBrand">
+      Created with DIGICAL by Digi Acoustics.<br>
+      <span id="dateTimeStamp"></span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
